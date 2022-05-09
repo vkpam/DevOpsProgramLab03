@@ -5,7 +5,7 @@ ENV TZ=Europe/Warsaw
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get install cmake -y
 RUN apt-get install g++ -y
-RUN (apt-get install libstdc++6 -y;add-apt-repository ppa:ubuntu-toolchain-r/test -y;apt-get update -y;apt-get upgrade -y;apt-get dist-upgrade -y)
+RUN apt-get install libstdc++6 -y
 RUN apt-get install libpthread-stubs0-dev -y
 RUN apt-get install libgtest-dev -y
 WORKDIR "/usr/src/gtest"
